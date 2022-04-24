@@ -1,0 +1,235 @@
+{
+  "interval": 1.0,
+  "roadnetFile": "roadnet.json",
+  "flowFile": "flow.json",
+  "rlTrafficLight": true,
+  "roadnetLogFile": "replay_roadnet.json",
+  "saveReplay": false,
+  "replayLogFile": "replay.txt",
+  "engine_thread": 1,
+  "num_step": 3600,
+  "action_interval": 20,
+  "device": "cpu",
+  "current_episode_idx": 0,
+  "current_global_step_idx": 0,
+  "num_learn_iter": 10,
+
+  "CoLight": {
+    "observation_feature_list": ["inter_2_current_phase", "lane_2_num_vehicle"],
+    "reward_feature_list": ["inter_2_num_waiting_vehicle"],
+    "reward_feature_weight": [-1.0],
+    "metric_feature_list": [
+      "world_2_average_travel_time",
+      "world_2_average_queue_length",
+      "world_2_average_throughput",
+      "world_2_average_delay"
+    ],
+    "learning_rate": 0.001,
+    "epsilon": 0.1,
+    "buffer_size": 100000,
+    "batch_size": 32,
+    "gamma": 0.9,
+    "tau": 0.1
+  },
+
+  "EcoLight": {
+    "observation_feature_list": ["inter_2_current_phase", "inlane_2_num_vehicle"],
+    "reward_feature_list": ["inter_2_num_waiting_vehicle"],
+    "reward_feature_weight": [-1.0],
+    "metric_feature_list": [
+      "world_2_average_travel_time",
+      "world_2_average_queue_length",
+      "world_2_average_throughput",
+      "world_2_average_delay"
+    ],
+    "learning_rate": 0.001,
+    "epsilon": 0.1,
+    "buffer_size": 100000,
+    "batch_size": 32,
+    "gamma": 0.9,
+    "tau": 0.1
+  },
+
+  "FixedTime": {
+    "fixed_time_interval": 20,
+    "observation_feature_list": ["inlane_2_num_vehicle"],
+    "reward_feature_list": ["inter_2_num_waiting_vehicle"],
+    "reward_feature_weight": [-1.0],
+    "metric_feature_list": [
+      "world_2_average_travel_time",
+      "world_2_average_queue_length",
+      "world_2_average_throughput",
+      "world_2_average_delay"
+    ],
+    "buffer_size": 100000
+  },
+
+  "FRAP": {
+    "observation_feature_list": [
+      "inter_2_current_phase",
+      "lanelink_2_num_vehicle"
+    ],
+    "reward_feature_list": [
+      "inter_2_num_waiting_vehicle"
+    ],
+    "reward_feature_weight": [-1.0],
+    "metric_feature_list": [
+      "world_2_average_travel_time",
+      "world_2_average_queue_length",
+      "world_2_average_throughput",
+      "world_2_average_delay"
+    ],
+    "learning_rate": 0.001,
+    "epsilon": 0.1,
+    "buffer_size": 100000,
+    "batch_size": 32,
+    "gamma": 0.9,
+    "tau": 0.1
+  },
+
+  "MaxPressure": {
+    "observation_feature_list": [
+      "lane_2_num_vehicle"
+    ],
+    "reward_feature_list": [],
+    "reward_feature_weight": [],
+    "metric_feature_list": [
+      "world_2_average_travel_time",
+      "world_2_average_queue_length",
+      "world_2_average_throughput",
+      "world_2_average_delay"
+    ]
+  },
+
+  "MPLight": {
+    "observation_feature_list": [
+      "inter_2_current_phase",
+      "lanelink_2_pressure"
+    ],
+    "reward_feature_list": ["inter_2_pressure"],
+    "reward_feature_weight": [-1.0],
+    "metric_feature_list": [
+      "world_2_average_travel_time",
+      "world_2_average_queue_length",
+      "world_2_average_throughput",
+      "world_2_average_delay"
+    ],
+    "learning_rate": 0.001,
+    "epsilon": 0.1,
+    "buffer_size": 100000,
+    "batch_size": 32,
+    "gamma": 0.9,
+    "tau": 0.1
+  },
+
+  "SOTL": {
+    "observation_feature_list": [
+      "inlane_2_num_waiting_vehicle"
+    ],
+    "reward_feature_list": [],
+    "reward_feature_weight": [],
+    "metric_feature_list": [
+      "world_2_average_travel_time",
+      "world_2_average_queue_length",
+      "world_2_average_throughput",
+      "world_2_average_delay"
+    ]
+  },
+
+  "RandomPath": {
+    "observation_feature_list": [
+      "phase_2_num_vehicle",
+      "phase_2_num_waiting_vehicle",
+      "phase_2_sum_waiting_time",
+      "phase_2_delay",
+      "phase_2_pressure",
+      "inlane_2_num_vehicle",
+      "inlane_2_num_waiting_vehicle",
+      "inlane_2_sum_waiting_time",
+      "inlane_2_delay",
+      "inlane_2_pressure",
+      "inter_2_current_phase"
+    ],
+    "reward_feature_list": ["inter_2_pressure"],
+    "reward_feature_weight": [-1.0],
+    "metric_feature_list": [
+      "world_2_average_travel_time",
+      "world_2_average_queue_length",
+      "world_2_average_throughput",
+      "world_2_average_delay"
+    ],
+    "n_layer_1_dim": [16, 18, 20, 22, 24],
+    "n_layer_2_dim": [16, 18, 20, 22, 24],
+    "learning_rate": 0.001,
+    "epsilon": 0.1,
+    "buffer_size": 100000,
+    "batch_size": 32,
+    "gamma": 0.9,
+    "tau": 0.1
+  },
+
+  "TinyLight": {
+    "observation_feature_list": [
+      "phase_2_num_vehicle",
+      "phase_2_num_waiting_vehicle",
+      "phase_2_sum_waiting_time",
+      "phase_2_delay",
+      "phase_2_pressure",
+      "inlane_2_num_vehicle",
+      "inlane_2_num_waiting_vehicle",
+      "inlane_2_sum_waiting_time",
+      "inlane_2_delay",
+      "inlane_2_pressure",
+      "inter_2_current_phase"
+    ],
+    "reward_feature_list": ["inter_2_pressure"],
+    "reward_feature_weight": [-1.0],
+    "metric_feature_list": [
+      "world_2_average_travel_time",
+      "world_2_average_queue_length",
+      "world_2_average_throughput",
+      "world_2_average_delay"
+    ],
+    "n_layer_1_dim": [16, 18, 20, 22, 24],
+    "n_layer_2_dim": [16, 18, 20, 22, 24],
+    "learning_rate": 0.001,
+    "epsilon": 0.1,
+    "buffer_size": 100000,
+    "batch_size": 32,
+    "gamma": 0.9,
+    "tau": 0.1
+  },
+
+  "TinyLightQuan": {
+    "observation_feature_list": [
+      "phase_2_num_vehicle",
+      "phase_2_num_waiting_vehicle",
+      "phase_2_sum_waiting_time",
+      "phase_2_delay",
+      "phase_2_pressure",
+      "inlane_2_num_vehicle",
+      "inlane_2_num_waiting_vehicle",
+      "inlane_2_sum_waiting_time",
+      "inlane_2_delay",
+      "inlane_2_pressure",
+      "inter_2_current_phase"
+    ],
+    "reward_feature_list": ["inter_2_pressure"],
+    "reward_feature_weight": [-1.0],
+    "metric_feature_list": [
+      "world_2_average_travel_time",
+      "world_2_average_queue_length",
+      "world_2_average_throughput",
+      "world_2_average_delay"
+    ],
+    "n_layer_1_dim": [16, 18, 20, 22, 24],
+    "n_layer_2_dim": [16, 18, 20, 22, 24],
+    "learning_rate": 1e-4,
+    "epsilon": 0.1,
+    "buffer_size": 100000,
+    "batch_size": 32,
+    "gamma": 0.9,
+    "tau": 0.1,
+    "num_bits": 16
+  }
+}
