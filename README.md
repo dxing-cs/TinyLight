@@ -53,3 +53,23 @@ python setup.py build_ext --inplace
 cd {project_dir}
 python 04_run_tinylight_mcu.py --dataset=Atlanta 
 ```
+
+## BibTeX
+
+If you find our work helpful in your research, please consider citing our paper:
+```tex
+@article{TinyLight22,
+  author    = {Dong Xing and
+               Qian Zheng and
+               Qianhui Liu and
+               Gang Pan},
+  title     = {TinyLight: Adaptive Traffic Signal Control on Devices with Extremely Limited Resources},
+  journal   = {CoRR},
+  volume    = {abs/2205.00427},
+  year      = {2022},
+  url       = {https://doi.org/10.48550/arXiv.2205.00427},
+  doi       = {10.48550/arXiv.2205.00427},
+  eprinttype = {arXiv},
+  eprint    = {2205.00427},
+}
+```
