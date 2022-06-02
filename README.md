@@ -1,6 +1,6 @@
 # Adaptive Traffic Signal Control on Devices with Extremely Limited Resources
 
-Code for _Adaptive Traffic Signal Control on Devices with Extremely Limited Resources_ (IJCAI 2022). 
+Code for _TinyLight: Adaptive Traffic Signal Control on Devices with Extremely Limited Resources_ (IJCAI 2022). 
 
 ## Dependencies
 - python=3.6.13
