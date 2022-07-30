@@ -1,6 +1,6 @@
 # Adaptive Traffic Signal Control on Devices with Extremely Limited Resources
 
-Code for _TinyLight: Adaptive Traffic Signal Control on Devices with Extremely Limited Resources_ (IJCAI 2022). 
+Code for [_TinyLight: Adaptive Traffic Signal Control on Devices with Extremely Limited Resources_](https://www.ijcai.org/proceedings/2022/555) (IJCAI 2022). 
 
 ## Dependencies
 - python=3.6.13
@@ -58,18 +58,18 @@ python 04_run_tinylight_mcu.py --dataset=Atlanta
 
 If you find our work helpful in your research, please consider citing our paper:
 ```tex
-@article{TinyLight22,
-  author    = {Dong Xing and
-               Qian Zheng and
-               Qianhui Liu and
-               Gang Pan},
+@inproceedings{ijcai2022-tinylight,
   title     = {TinyLight: Adaptive Traffic Signal Control on Devices with Extremely Limited Resources},
-  journal   = {CoRR},
-  volume    = {abs/2205.00427},
+  author    = {Xing, Dong and Zheng, Qian and Liu, Qianhui and Pan, Gang},
+  booktitle = {Proceedings of the Thirty-First International Joint Conference on
+               Artificial Intelligence, {IJCAI-22}},
+  publisher = {International Joint Conferences on Artificial Intelligence Organization},
+  editor    = {Lud De Raedt},
+  pages     = {3999--4005},
   year      = {2022},
-  url       = {https://doi.org/10.48550/arXiv.2205.00427},
-  doi       = {10.48550/arXiv.2205.00427},
-  eprinttype = {arXiv},
-  eprint    = {2205.00427},
+  month     = {7},
+  note      = {Main Track}
+  doi       = {10.24963/ijcai.2022/555},
+  url       = {https://doi.org/10.24963/ijcai.2022/555},
 }
 ```
